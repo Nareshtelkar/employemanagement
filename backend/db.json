@@ -1,11 +1,28 @@
 {
   "users": [
     {
-      "id": "e8fd",
+      "id": "30a4",
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "password": ""
+    },
+    {
+      "id": "7e75",
       "name": "Naresh Telkar",
       "email": "nareshtelkar2674@gmail.com",
       "mobile": "92088208484",
       "password": "12345"
+    }
+  ],
+  "employees": [
+    {
+      "id": "657e",
+      "name": "Naresh Telkar",
+      "email": "nareshtselkds6ar2674@gmail.com",
+      "mobile": "8787878787",
+      "designation": "developer",
+      "address": "4522416"
     }
   ]
 }

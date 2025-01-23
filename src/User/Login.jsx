@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-const URL = "http://localhost:3000/users";
+const URL = "https://mongoserver-dm1k.onrender.com/api/users";
 
 
 const Login = () => {
@@ -21,7 +21,8 @@ const Login = () => {
 
     const fetchData = async () => {
         const data = await axios.get(URL);
-        setUsers(data.data);
+        setUsers(data.data.data);
+        console.log(data.data.data);
     }
 
     useEffect(() => {

@@ -3,13 +3,32 @@ import { Link, Outlet } from 'react-router-dom'
 
 const Root = () => {
   return (
-    <div>
-       <h1>Root Page</h1>
-       <Link to='/root/home'>Home</Link>
-       <Link to='/root/service'>Service</Link>
-       <Link to='/root/contact'>Contact</Link>
-       <Outlet/>
-      
+    <div className='root'>
+      <div className='left'>
+        <h1>EMPLOYEE MANAGEMENT</h1>
+        <ul>
+          <li>
+            <Link to='/root/home'>Home</Link>
+          </li>
+          <li>
+            <Link to='/root/registration'>Registration</Link>
+          </li>
+          <li>
+            <Link to='/root/employees'>Employees</Link>
+          </li>
+          <li>
+            <Link to='/root/contact'>Contact</Link>
+          </li>
+          <li>
+            <Link to='/login'>Logout</Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className='right'>
+        <Outlet />
+      </div>
+
 
     </div>
   )

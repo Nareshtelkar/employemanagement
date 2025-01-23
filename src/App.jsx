@@ -5,14 +5,16 @@ import Signup from './User/Signup'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './Root/Root'
 import Home from './Root/Home'
-import Service from './Root/Service'
 import Contact from './Root/Contact'
+import Registration from './Root/Registration'
+import Employees from './Root/Employees'
+import Edit from './Root/Edit'
 
 
 const router = createBrowserRouter([
   {
     path:"/",
-    element:<Signup></Signup>
+    element:<Login></Login>
   },
   {
     path:"/signup",
@@ -35,12 +37,20 @@ const router = createBrowserRouter([
         element:<Home></Home>
       },
       {
-        path:"/root/service",
-        element:<Service></Service>
+        path:"/root/registration",
+        element:<Registration></Registration>
+      },
+      {
+        path:"/root/employees",
+        element:<Employees></Employees>
       },
       {
         path:"/root/contact",
         element:<Contact></Contact>
+      },
+      {
+        path:"/root/edit/:id",
+        element:<Edit></Edit>
       }
 
     ]
