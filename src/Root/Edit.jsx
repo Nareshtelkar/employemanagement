@@ -29,8 +29,22 @@ const Edit = () => {
     }
   };
 
+  const [employees, setEmployees] = useState([]);
+  const fetchEmployees = async () => {
+    try {
+      const response = await axios.get(URL);
+      if (response.data) {
+        setEmployees(response.data.data);
+      }
+    } catch (error) {
+      console.error("Error fetching employees:", error);
+    }
+  };
+
   useEffect(() => {
     fetchEmployee();
+    fetchEmployees();
+
   }, [id]);
 
   const handleChange = (e) => {
@@ -42,6 +56,22 @@ const Edit = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check if email exists
+    
+    const emailExists = employees.some(emp => emp.email === email && emp._id !== id);;
+    if (emailExists) {
+      alert("Email already exists. Please use a different email.");
+      return;
+    }
+    // Check if mobile number exists
+    const mobileExists = employees.some(emp => emp.mobile === mobile && emp._id !== id);
+    if (mobileExists) {
+      alert("Mobile number already exists. Please use a different mobile number.");
+      return;
+    }
+
+    
     await axios.put(`${URL}/${id}`, employee);
     navigate('/root/employees');
   };
