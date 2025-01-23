@@ -2,7 +2,7 @@ import React from 'react'
 import Login from './User/Login'
 import './App.css'
 import Signup from './User/Signup'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom'
 import Root from './Root/Root'
 import Home from './Root/Home'
 import Contact from './Root/Contact'
@@ -11,7 +11,7 @@ import Employees from './Root/Employees'
 import Edit from './Root/Edit'
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path:"/",
     element:<Login></Login>
