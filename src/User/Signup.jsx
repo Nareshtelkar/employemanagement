@@ -89,8 +89,8 @@ if(user==null) {
 
                 </div>
                 <button className='login-btn'>Signup</button>
-                <div>
-                    <h3>Already have an account <Link to={"/login"}> Login</Link> </h3>
+                <div className='login-link'>
+                      <h3>Already have an account <Link to={"/login"}> Login</Link> </h3>
                 </div>
             </form>
         </div>

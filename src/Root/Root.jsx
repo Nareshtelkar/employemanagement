@@ -19,23 +19,22 @@ const Root = () => {
           <span></span>
         </div>
         <ul className={isOpen ? 'show' : ''}>
-          <li>
-            <Link to='/root/home' onClick={() => setIsOpen(false)}>Home</Link>
+          <li onClick={() => setIsOpen(false)}>
+            <Link to='/root/home'>Home</Link>
           </li>
-          <li>
-            <Link to='/root/registration' onClick={() => setIsOpen(false)}>Registration</Link>
+          <li onClick={() => setIsOpen(false)}>
+            <Link to='/root/registration'>Registration</Link>
           </li>
-          <li>
-            <Link to='/root/employees' onClick={() => setIsOpen(false)}>Employees</Link>
+          <li onClick={() => setIsOpen(false)}>
+            <Link to='/root/employees'>Employees</Link>
           </li>
-          <li>
-            <Link to='/root/contact' onClick={() => setIsOpen(false)}>Contact</Link>
+          <li onClick={() => setIsOpen(false)}>
+            <Link to='/root/contact'>Contact</Link>
           </li>
-          <li>
-            <Link to='/login' onClick={() => setIsOpen(false)}>Logout</Link>
+          <li onClick={() => setIsOpen(false)}>
+            <Link to='/login'>Logout</Link>
           </li>
-        </ul>
-      </div>
+        </ul>      </div>
 
       <div className='right'>
         <Outlet />

@@ -41,8 +41,8 @@ const Employees = () => {
         <th>Mobile</th>
         <th>Designation</th>
         <th>Address</th> 
-        <th>Edit</th>
         <th>Delete</th>
+        <th>Edit</th>
 
       </tr>
       </thead>

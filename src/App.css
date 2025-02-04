@@ -31,6 +31,17 @@
     background-color: rgb(180, 220, 220);
     color: white;
   }
+  img{
+    opacity: 0.9;
+    object-fit: cover;
+
+
+  }
+  h1 {
+    font-size: clamp(24px, 5vw, 40px);
+    margin-bottom: 20px;
+    color: #333;
+  }
 }
 
 .container {
@@ -53,6 +64,12 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     padding: 30px 20px;
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      padding: 20px;
+      
+    }
 
     .head {
       margin-bottom: 20px;
@@ -86,6 +103,15 @@
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
       border-radius: 2px;
     }
+
+  }
+  
+}
+.login-link{
+  @media screen and (max-width: 480px) {
+    text-align: center;
+    font-size: 0.9rem;
+    
   }
 }
 
@@ -94,6 +120,13 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    align-items: center;
+
+       
+  }
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -106,6 +139,10 @@
   background-color: aqua;
   position: relative;
 
+  @media screen and (max-width: 480px) {
+
+  }
+
   @media (min-width: 768px) {
     width: 300px;
  
@@ -117,12 +154,17 @@
     padding-bottom: 30px;
     font-size: clamp(20px, 3vw, 25px);
     font-family: sans-serif;
+
+    @media screen and (max-width: 480px) {
+      padding-bottom: 0px;
+      
+    }
   }
 
   .hamburger {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 16px;
     right: 20px;
     cursor: pointer;
     
@@ -148,6 +190,11 @@
       display: block;
     }
 
+    @media screen and (max-width: 480px) {
+      padding-top: 20px;
+      
+    }
+
     &.show {
       display: block;
     }
@@ -160,8 +207,18 @@
       background-color: bisque;
       font-size: clamp(16px, 2vw, 18px);
 
+      @media screen and (max-width: 480px) {
+        text-align: center;
+        width: 80%;
+        margin: 22px auto;
+        padding: 10px;
+        
+      }
+
       a {
         text-decoration: none;
+
+        color: #000;
       }
     }
   }
@@ -179,6 +236,13 @@
   align-items: center;
   padding: 20px;
 
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    align-items: flex-start;
+    padding: 19px 10px;
+    
+  }
+
   .form {
     width: 90%;
     max-width: 350px;
@@ -191,8 +255,13 @@
     border-radius: 5px;
     padding: 30px 20px;
 
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
     .head {
       margin-bottom: 20px;
+      font-size: clamp(22px, 3vw, 25px);
     }
 
     .form-group {
@@ -201,8 +270,15 @@
       width: 100%;
       gap: 8px;
 
+      
+      
       label {
         font-size: clamp(14px, 2vw, 17px);
+
+        @media screen and (max-width: 480px) {
+          font-size: 1.05rem;
+          
+        }
       }
 
       input {
@@ -210,11 +286,17 @@
         border: 1px solid black;
         border-radius: 4px;
         width: 100%;
+
+        @media screen and (max-width: 480px) {
+          font-size: 1.05rem;
+          
+        }
       }
+
     }
 
     .register-btn {
-      font-size: clamp(14px, 2vw, 17px);
+      font-size: clamp(17px, 2vw, 17px);
       margin-top: 20px;
       width: 100%;
       max-width: 200px;
@@ -224,6 +306,8 @@
       border-radius: 5px;
       background-color: green;
       color: white;
+
+     
     }
   }
 }
@@ -302,7 +386,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding:5px;
+
+  @media screen and (max-width: 480px) {
+    
+    
+  }
 
   .form {
     width: 90%;
